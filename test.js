@@ -1,1 +1,1 @@
-function calc () {return 1 + 1}
+console.log("Hello world");
