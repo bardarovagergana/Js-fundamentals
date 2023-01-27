@@ -1,6 +1,8 @@
-function solve (arg )
+function solve (input )
 {
-    let name = arg;
-    console.log(name);
+  
+     console.log(input [0]);
+     console.log(input [1]);
+     console.log(input [2])
 }
-solve ("Gergana");
+solve (["a","b","c"]);
