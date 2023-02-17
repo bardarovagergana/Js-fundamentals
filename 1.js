@@ -1,19 +1,14 @@
 function solve (arg)
 {
-    let a=Number(arg);
-     if(100<=a && a<=200)
+    let a=arg[0];
+    if (a==="s3cr3t!P@ssw0rd");
     {
-        console.log("Between 100 and 200");
-    } 
-    else if(a<100)
-    {
-        console.log("Less than 100");
-
-    }   
-   
+        console.log("Welcome");
+    }
     else
     {
-        console.log("Greater than 200");
+        console.log("Wrong password!");
     }
+
 }
-solve("255")
+solve("s3cr3t!P@ssw0rd")

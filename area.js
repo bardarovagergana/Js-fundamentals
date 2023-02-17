@@ -8,9 +8,7 @@ function solve (arg)
     else if(a<100)
     {
         console.log("Less than 100");
-
     }   
-   
     else
     {
         console.log("Greater than 200");
