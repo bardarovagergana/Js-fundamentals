@@ -13,9 +13,7 @@ function solve (arg1,arg2,arg3,arg4,arg5,arg6)
     let priceTruck=truckCnt*2;
     let tottleToysCnt=puzzleCnt+dollCnt+teddyBearCnt+minionsCnt+truckCnt;
     let tottleToysPrice=pricePuzzle+priceDoll+priceTeddyBear+priceMinions+priceTruck;
-    let krPrice=0;
-    let profit=0;
-    if(tottleToysCnt>=25)
+    if(tottleToysCnt>=50)
     {
         tottleToysPrice=tottleToysPrice*0.75; 
     }
