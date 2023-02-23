@@ -1,35 +1,34 @@
 function solution(arg1,arg2,arg3)
 {
-    let budget=Number(arg1);
-    let countStaf=Number(arg2);
-    let priceClothing=Number(arg3);
-    let dekor=budget*0.10;
-     let expenses=0;
-     let budgetOll=0;
-    budgetOll+=dekor;
-    let sumClothing=0
-    if(countStaf>=150)
+    let recordInSeconds=Number(arg1);
+    let distanceInMeters=Number(arg2);
+    let seconPerMeter=Number(arg3);
+    let time=0;
+    let score=0;
+    time=distanceInMeters*seconPerMeter;
+       if (distanceInMeters>=15)
     {
-        priceClothing=priceClothing*0.9;
-     sumClothing=countStaf * priceClothing;
+        time+=Math.floor(distanceInMeters/15)* 12.5;
     }
-    else if(countStaf<150)
-    {
-    sumClothing=countStaf*priceClothing;
-    }
-    budgetOll+=sumClothing;
-    expenses+=budget;
-    expenses-=budgetOll;
-    if(budget<budgetOll)
-    {
-        console.log(`Not enough money!`);
-        console.log(`Wingard needs ${(budgetOll-budget).toFixed(2)} leva more.`);
-    }
-    else if(budget>=budgetOll)
-    {
-        console.log(`Action!`);
-        console.log(`Wingard starts filming with ${(budget-budgetOll).toFixed(2)} leva left.`);
-    }
+   if(time>=recordInSeconds)
+   {
+    score+=time-recordInSeconds;
+    console.log(`No, he failed! He was ${score.toFixed(2)} seconds slower.`)
 
+   }
+   else
+   {
+    
+    console.log(` Yes, he succeeded! The new world record is ${time.toFixed(2)} seconds.`)
+
+   }
 }
-solution("9587.88","222","55.68")
+solution("10464","1500","20")
+/*•	Ако Иван е подобрил Световния рекорд (времето му е по-малко от рекорда) отпечатваме:
+o	" Yes, he succeeded! The new world record is {времето на Иван} seconds."
+•	Ако НЕ е подобрил рекорда (времето му е по-голямо или равно на рекорда) отпечатваме:
+o	"No, he failed! He was {недостигащите секунди} seconds slower."
+Резултатът трябва да се форматира до втория знак след десетичната запетая.
+
+Времето, което не му е стигнало за да подобри рекорда: 
+31250 – 10464 = 20786 сек.*/
