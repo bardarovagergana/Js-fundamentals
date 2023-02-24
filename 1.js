@@ -1,23 +1,12 @@
-function title(input)
-{
-let age=Number(input.shift());
-let gender =input.shift();
-if (gender=='f')
-{
-    if (age>=16)
+ function slution(arg)
+ {
+    let num=Number(arg);
+    if (num<=100 && num>=-100 && num!=0)
     {
-        console.log("Ms.");
+        console.log("Yes");
     }
-    else{
-        console.log("Miss");
-    }
-}
-else {
-    if(age>=16)
-        {
-            console.log("Mr.");
-        }
-}
+    else
+    console.log("No");
 
-}
-title("16","m")
+ }
+ slution("-100")
