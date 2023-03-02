@@ -1,8 +1,8 @@
-function solution(arg1,arg2,arg3)
+function solution(input)
 {
-    let recordInSeconds=Number(arg1);
-    let distanceInMeters=Number(arg2);
-    let seconPerMeter=Number(arg3);
+    let recordInSeconds=Number(input[0]);
+    let distanceInMeters=Number(input[1]);
+    let seconPerMeter=Number(input[2]);
     let time=0;
     let score=0;
     time=distanceInMeters*seconPerMeter;
@@ -23,4 +23,4 @@ function solution(arg1,arg2,arg3)
 
    }
 }
-solution("10464","1500","20")
+solution(["10464","1500","20"])

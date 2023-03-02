@@ -1,10 +1,10 @@
-function solution(arg1,arg2)
+function solution(input)
 {
-let age=Number(arg1);
-let gender=arg2;
-if(age>=16)
+let age=Number(input[0]);
+let gender=input[1];
+if(age >= 16)
 {
-    if(gender==="f")
+    if(gender == "f")
     {
         console.log("Ms.");
     }
@@ -14,7 +14,7 @@ if(age>=16)
     }
 }
     else
-    { if(gender==="f")
+    { if(gender == "f")
         {
         console.log("Miss");
     }

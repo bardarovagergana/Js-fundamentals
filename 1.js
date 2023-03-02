@@ -1,24 +1,47 @@
-function sumSeconds(input)
+function shop (arg1,arg2,arg3)
 {
-   let first = Number(input[0]);
-   let second = Number(input[1]);
-   let third = Number(input[2])
-   let timeSum = 0;
-   let minutes = 0;
-   timeSum = first + second + third;
-   second = timeSum % 60;  
-   minutes = Math.trunc(timeSum / 60);
-      
-   if (second < 10)
-   {
-      console.log(`${minutes}:0${second}`);
-   }
-else
-    console.log(`${minutes}:${second}`);
-   
+    let product=arg1;
+    let city=arg2;
+    let amount=Number(arg3);
+    if (city==="Sofia")
+    {
+        switch(product)
+        {
+            case "coffee": console.log(amount*0.50);break;
+            case "water": console.log(amount*0.80);break;
+            case "beer": console.log(amount*1.20);break;
+            case "sweets": console.log(amount*1.45);break;
+            case "peanuts": console.log(amount*1.60);break;
+            default:console.log("Error");break;
+        }
+
+    }
+    if (city==="Plovdiv")
+    {
+        switch(product)
+        {
+            case "coffee": console.log(amount*0.40);break;
+            case "water": console.log(amount*0.70);break;
+            case "beer": console.log(amount*1.15);break;
+            case "sweets": console.log(amount*1.30);break;
+            case "peanuts": console.log(amount*1.50);break;
+            default:console.log("Error");break;
+        }
+
+    }
+    if (city==="Varna")
+    {
+        switch(product)
+        {
+            case "coffee": console.log(amount*0.45);break;
+            case "water": console.log(amount*0.70);break;
+            case "beer": console.log(amount*1.10);break;
+            case "sweets": console.log(amount*1.35);break;
+            case "peanuts": console.log(amount*1.55);break;
+            default:console.log("Error");break;
+        }
+
+    }
+
+
 }
-sumSeconds(["35","45","44"])
-/*
-Трима спортни състезатели финишират за някакъв брой секунди (между 1 и 50). Да се 
-напише функция, която получава три аргумента - секунди и пресмята сумарното им време във формат 
-"минути:секунди". Секундите да се изведат с водеща нула (2  "02", 7  "07", 35  "35"). */

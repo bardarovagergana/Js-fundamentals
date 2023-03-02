@@ -1,35 +1,27 @@
-function solution(arg1,arg2,arg3)
+function solution(input)
 {
-    let budget=Number(arg1);
-    let countStaf=Number(arg2);
-    let priceClothing=Number(arg3);
-    let dekor=budget*0.10;
-     let expenses=0;
-     let budgetOll=0;
-    budgetOll+=dekor;
-    let sumClothing=0
-    if(countStaf>=150)
+    let budget = Number(input[0]);
+    let countStaf = Number(input[1]);
+    let priceClothing = Number(input[2]);
+    let dekor =0;
+    let sumClothing = 0;
+    let sum = 0;
+    dekor = budget * 0.10;
+    if(countStaf > 150)
     {
-        priceClothing=priceClothing*0.9;
-     sumClothing=countStaf * priceClothing;
+        priceClothing *= 0.90;
     }
-    else if(countStaf<150)
-    {
-    sumClothing=countStaf*priceClothing;
-    }
-    budgetOll+=sumClothing;
-    expenses+=budget;
-    expenses-=budgetOll;
-    if(budget<budgetOll)
+    sumClothing = priceClothing * countStaf;
+    sum = dekor + sumClothing;
+        if (budget < sum)
     {
         console.log(`Not enough money!`);
-        console.log(`Wingard needs ${(budgetOll-budget).toFixed(2)} leva more.`);
+        console.log(`Wingard needs ${( sum - budget ).toFixed(2)} leva more.`);
     }
-    else if(budget>=budgetOll)
+    else if(budget >= sum)
     {
         console.log(`Action!`);
-        console.log(`Wingard starts filming with ${(budget-budgetOll).toFixed(2)} leva left.`);
+        console.log(`Wingard starts filming with ${( budget - sum ).toFixed(2)} leva left.`);
     }
-
 }
-solution("9587.88","222","55.68")
+solution(["9587.88","222","55.68"])
