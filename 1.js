@@ -1,18 +1,20 @@
  function dayTiket(arg1)
  {
-    let dayWeek=arg1;
- switch(dayWeek)
-        {
-            case "Monday":
-                case "Tuesday":
-                   case "Friday": console.log("12");break;
-                   case "Wednesday":
-                        case "Thursday":console.log("14");break;
-                            
-                            case "Saturday":
-                                case "Sunday":console.log("14");break;
-                            default: console.log("Error");break;
-        }
+    let product=arg1;
+    if(product=="banana"|| product=="apple" || product=="kiwi" || product== "cherry" || product=="lemon"  || product=="grapes" )
+    {
+        console.log("fruit")
+    }
+    else if(product=="tomato"|| product=="cucumber" || product=="pepper" || product== "carrot")
+    {
+        console.log("vegetable");
+    }
+    else
+    {
+        console.log("unknown");
+    }
+
 
  }
- dayTiket("Friday")
+ dayTiket("to") 
+
