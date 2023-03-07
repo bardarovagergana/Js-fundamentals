@@ -1,24 +1,18 @@
-function solution (arg1)
-{
-    let speedIn=Number(arg1);
-    if (speedIn>1000)
-    {
+function solution(arg1) {
+    let speedIn = Number(arg1);
+    if (speedIn > 1000) {
         console.log("extremely fast");
     }
-    else if (speedIn>150)
-    {
+    else if (speedIn > 150) {
         console.log("ultra fast");
     }
-    else if (speedIn>50)
-    {
+    else if (speedIn > 50) {
         console.log("fast");
     }
-    else if (speedIn>10)
-    {
+    else if (speedIn > 10) {
         console.log("average");
     }
-    else if (speedIn<=10)
-    {
+    else if (speedIn <= 10) {
         console.log("slow");
     }
 }
