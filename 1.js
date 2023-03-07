@@ -1,47 +1,105 @@
-function shop (arg1,arg2,arg3)
+function tradeCommissions (input)
 {
-    let product=arg1;
-    let city=arg2;
-    let amount=Number(arg3);
-    if (city==="Sofia")
+    let city = input[0];
+    let sells = Number(input[1]);
+
+    if (city == "Sofia")
     {
-        switch(product)
+         if (sells > 10000)
         {
-            case "coffee": console.log(amount*0.50);break;
-            case "water": console.log(amount*0.80);break;
-            case "beer": console.log(amount*1.20);break;
-            case "sweets": console.log(amount*1.45);break;
-            case "peanuts": console.log(amount*1.60);break;
-            default:console.log("Error");break;
+            sells = sells * 0.12;
+        }
+         else if(sells > 1000 && sells <= 10000)
+        {
+            
+            sells = sells * 0.08;
+            
+        }
+        else if (sells > 500 && sells <= 1000)
+        {
+            
+            sells = sells * 0.07;
+            
+        }
+         else if (sells>=0 && sells <= 500)
+        {
+            sells = sells * 0.05;
+        }
+        if(sells<=0 )
+        {
+        console.log("error");
         }
 
     }
-    if (city==="Plovdiv")
+    else if (city == "Varna")
     {
-        switch(product)
+         if (sells > 10000)
         {
-            case "coffee": console.log(amount*0.40);break;
-            case "water": console.log(amount*0.70);break;
-            case "beer": console.log(amount*1.15);break;
-            case "sweets": console.log(amount*1.30);break;
-            case "peanuts": console.log(amount*1.50);break;
-            default:console.log("Error");break;
+            sells = sells * 0.13;
+        }
+         else if(sells > 1000 && sells <= 10000)
+        {
+            
+            sells = sells * 0.1;
+            
+        }
+        else if (sells > 500 && sells <= 1000)
+        {
+            
+            sells = sells * 0.075;
+          
+        }
+         else if (sells>=0 && sells <= 500)
+        {
+            sells = sells * 0.045;
+            
+        }
+       else  if(sells<=0 )
+        {
+        console.log("error");
         }
 
     }
-    if (city==="Varna")
+    else if (city == "Plovdiv")
     {
-        switch(product)
-        {
-            case "coffee": console.log(amount*0.45);break;
-            case "water": console.log(amount*0.70);break;
-            case "beer": console.log(amount*1.10);break;
-            case "sweets": console.log(amount*1.35);break;
-            case "peanuts": console.log(amount*1.55);break;
-            default:console.log("Error");break;
-        }
 
+       
+         if (sells > 10000)
+        {
+            sells = sells * 0.145;
+        }
+         else if(sells > 1000 && sells <= 10000)
+        {
+            
+            sells = sells * 0.12;
+            
+        }
+        else if (sells > 500 && sells <= 1000)
+        {
+            
+            sells = sells * 0.08;
+        
+        }
+         else if (sells>=0 && sells <= 500)
+        {
+            sells = sells * 0.055;
+        }
+        if(sells<=0 )
+        {
+        console.log("error");
+        }
+  console.log((sells).toFixed(2));
+    }
+      else
+    {
+        console.log("error");
+
+Math.pow ()   }
     }
 
 
-}
+
+tradeCommissions (["Kaspichan","50"])
+
+
+

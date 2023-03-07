@@ -1,19 +1,19 @@
-function solution ( arg1 , arg2 , arg3 )
+function solution(input)
 {
-    let firstTime = Number ( arg1 );
-    let secondTime = Number ( arg2 );
-    let thirdTime = Number ( arg3 );
-
-    let totalTime = firstTime + secondTime + thirdTime ;
-    let minets = Math.trunc( totalTime / 60 );
-    let seconds = totalTime % 60;
-    if ( seconds < 10 )
+    let day=input[0];
+    switch(day)
     {
-        
-        console.log(` ${minets}:0${seconds}`);
+    case "Monday":
+        case "Tuesday":
+            case "Wednesday":
+                case "Thursday":
+                    case"Friday":
+   console.log("Working day");break;
+ case "Saturday":
+    case "Sunday": console.log("Weekend");break;
+default:
+console.log("Error");break;
     }
-    else
-     {
-    console.log(`${minets}:${seconds}`);
+
 }
-}
+solution(["Monday"])
