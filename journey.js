@@ -36,10 +36,3 @@ function journey(input) {
     console.log(`${campHotel} - ${(budget).toFixed(2)}`);
 }
 journey(["312", "summer"])
-
-
-
-
-
-
-
