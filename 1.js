@@ -1,105 +1,50 @@
-function tradeCommissions (input)
-{
-    let city = input[0];
-    let sells = Number(input[1]);
-
-    if (city == "Sofia")
-    {
-         if (sells > 10000)
-        {
-            sells = sells * 0.12;
-        }
-         else if(sells > 1000 && sells <= 10000)
-        {
-            
-            sells = sells * 0.08;
-            
-        }
-        else if (sells > 500 && sells <= 1000)
-        {
-            
-            sells = sells * 0.07;
-            
-        }
-         else if (sells>=0 && sells <= 500)
-        {
-            sells = sells * 0.05;
-        }
-        if(sells<=0 )
-        {
-        console.log("error");
-        }
+function summerOtfit (input) {
+    let degrees = Number (input[0]);
+    let dayTime = input[1];
+    let outfit ;
+    let shoes ;
+ 
+    if (degrees >= 25) {
+        switch (dayTime){
+       case "Morning": 
+            outfit = "T-Shirt";
+            shoes = "Sandals";break;  
+       case "Afternoon":
+        outfit = "Swim Suit";
+        shoes = "Barefoot";break;
+       case "Evening":
+        outfit = "Shirt";
+        shoes = "Moccasins";
+       }
+    }
+        else if (degrees > 18 && degrees <= 24){
+            switch (dayTime){
+            case "Morning":
+                case "Evening": 
+                 outfit = "Shirt";
+                 shoes = "Moccasins";break;
+            case "Afternoon":
+             outfit = "T-Shirt";
+             shoes = "Sandals";break;
+            }
 
     }
-    else if (city == "Varna")
-    {
-         if (sells > 10000)
-        {
-            sells = sells * 0.13;
+    else if (degrees >= 10 && degrees <= 18){
+        switch (dayTime){
+        case "Morning": 
+             outfit = "Sweatshirt";
+             shoes = "Sneakers";break;
+        case "Afternoon":
+            case "Evening":
+         outfit = "Shirt";
+         shoes = "Moccasins";break;
         }
-         else if(sells > 1000 && sells <= 10000)
-        {
-            
-            sells = sells * 0.1;
-            
-        }
-        else if (sells > 500 && sells <= 1000)
-        {
-            
-            sells = sells * 0.075;
-          
-        }
-         else if (sells>=0 && sells <= 500)
-        {
-            sells = sells * 0.045;
-            
-        }
-       else  if(sells<=0 )
-        {
-        console.log("error");
-        }
+}
 
-    }
-    else if (city == "Plovdiv")
-    {
+    console.log(`It's ${degrees} degrees, get your ${outfit} and ${shoes}.`);
+}
+summerOtfit(["20","Morning"])
 
-       
-         if (sells > 10000)
-        {
-            sells = sells * 0.145;
-        }
-         else if(sells > 1000 && sells <= 10000)
-        {
-            
-            sells = sells * 0.12;
-            
-        }
-        else if (sells > 500 && sells <= 1000)
-        {
-            
-            sells = sells * 0.08;
-        
-        }
-         else if (sells>=0 && sells <= 500)
-        {
-            sells = sells * 0.055;
-        }
-        if(sells<=0 )
-        {
-        console.log("error");
-        }
-  console.log((sells).toFixed(2));
-    }
-      else
-    {
-        console.log("error");
-
-Math.pow ()   }
-    }
-
-
-
-tradeCommissions (["Kaspichan","50"])
 
 
 
