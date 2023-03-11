@@ -1,45 +1,48 @@
-function journey(input) {
-    let budget = Number(input[0]);
-    let seasone = input[1];
-    let campHotel;
-    let destination;
-    if (budget > 1000) {
-        budget *= 0.90;
-        destination = "Europe";
-        campHotel = "Hotel";
+function hotelRoom(input) {
+    let month = input[0];
+    let nightCount = Number(input[1]);
+    let studio;
+    let apartment;
+    let sumStudio = 0;
+    let sumapartment = 0;
+    switch (month) {
+        case `May`:
+        case `October`:
+            studio = 50;
+            apartment = 65;
+            sumStudio = studio * nightCount;
+            if (nightCount > 14) {
+                sumStudio *= 0.70;
+            }
+            else if (nightCount > 7) {
+                sumStudio *= 0.95;
+            }
+            break;
+        case `June`:
+        case `September`:
+            studio = 75.20;
+            apartment = 68.70;
+            sumStudio = studio * nightCount;
+            if (nightCount > 14) {
+                sumStudio *= 0.80;
+            } break;
+        case `July`:
+        case `August`:
+            studio = 76;
+            apartment = 77;
+            sumStudio = studio * nightCount; break;
     }
-    else if (budget <= 100) {
-        destination = "Bulgaria";
-        if (seasone === "summer") {
-            budget *= 0.30;
-            campHotel = "Camp";
-        }
-        else {
-            budget *= 0.70;
-            campHotel = "Hotel";
-        }
+
+    if (nightCount > 14)
+        sumapartment = (apartment * nightCount) * 0.90;
+    else {
+        sumapartment = apartment * nightCount;
     }
-    else if (budget <= 1000) {
-        destination = "Balkans";
-        if (seasone === "summer") {
-            budget *= 0.40;
-            campHotel = "Camp";
-        }
-        else {
-            budget *= 0.80;
-            campHotel = "Hotel";
-        }
+
+    console.log(`Apartment: ${(sumapartment).toFixed(2)} lv.`);
+    console.log(`Studio: ${(sumStudio).toFixed(2)} lv.`);
 
 
-    }
-    console.log(`Somewhere in ${destination}`);
-    console.log(`${campHotel} - ${(budget).toFixed(2)}`);
 }
-journey(["312", "summer"])
-
-
-
-
-
-
+hotelRoom(["June", "14"])
 
