@@ -1,22 +1,29 @@
-function salary (input) {
+function oscars (input) {
 
-    let salary = Number (input[1]);
-    let site = input[2];
+    let name = input [0];
+    let pointsAcademi = Number (input[1]);
+    let evaluative = Number (input [2]);
+    let point = Number (input [3]);
+    let sum = 0;
+
+
+    for ( let i = 1 ; i <= evaluative ; i++ ){
+         point += point [i];
+         sum = point + (name.length * pointsAcademi) / 2;
+
+console.log(sum);
+    }
+    if (point >= 1250.5 ){
+    console.log (`Congratulations, ${name} got a nominee for leading role with ${sum}!`)
+    }
+    else {
+        let more = 1250.5 - sum;
+        console.log(`Sorry, ${name} you need ${more} more!`);
+    }
     
-    for (let i = 1 ; i <= input.length ; i++){
-        site = input[i];
-        switch(site){
-            case "Facebook" :   salary -= 150; break;
-            case "Instagram" :  salary -= 100; break;
-            case "Reddit" : salary -= 50; break;
-            
-     }
-    }
-       if ( salary <= 0){
-        console.log(`You have lost your salary.`);  
-            }
-    else{
-        console.log( salary.toFixed(0));
-    }
+
 }
-salary (["3","150","Facebook","Stackoverflow.com","softuni.bg"])
+oscars (["Sandra Bullock","340","5","Robert De Niro","50",
+"Julia Roberts","40.5","Daniel Day-Lewis","39.4",
+"Nicolas Cage","29.9",
+"Stoyanka Mutafova","33"])
