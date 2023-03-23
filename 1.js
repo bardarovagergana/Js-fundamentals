@@ -1,33 +1,22 @@
-function cleverLily (input){
-let count = Number (input [0]);
-let num = Number (input[1]);
-let p1 = 0;
-let p2 = 0;
-let p3 = 0;
-let p4 = 0;
-let p5 = 0;
-for (let i = 1 ; i <= count ; i++){
- num = Number (input[i]);
+function salary (input) {
 
- if ( num < 200){
-p1 ++;
- }else if (num <= 399) {
-    p2 ++;
- }else if (num <= 599){
-    p3 ++;
- }else if (num <= 799){
-    p4 ++;
- } else {
-    p5++;
- }
-
+    let salary = Number (input[1]);
+    let site = input[2];
+    
+    for (let i = 1 ; i <= input.length ; i++){
+        site = input[i];
+        switch(site){
+            case "Facebook" :   salary -= 150; break;
+            case "Instagram" :  salary -= 100; break;
+            case "Reddit" : salary -= 50; break;
+            
+     }
+    }
+       if ( salary <= 0){
+        console.log(`You have lost your salary.`);  
+            }
+    else{
+        console.log( salary.toFixed(0));
+    }
 }
-console.log (`${(p1 / count * 100 ).toFixed(2)}%`);
-console.log (`${(p2 / count * 100).toFixed(2) }%`);
-console.log (`${(p3 / count * 100).toFixed(2) }%`);
-console.log (`${(p4 / count * 100).toFixed(2) }%`);
-console.log (`${(p5 / count * 100).toFixed(2) }%`);
-}
-histogram (["7","800","801","250","199","399","599","799"])
-
-
+salary (["3","150","Facebook","Stackoverflow.com","softuni.bg"])
